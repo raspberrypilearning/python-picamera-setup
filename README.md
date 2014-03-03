@@ -1,5 +1,7 @@
 # Python Picamera Setup
 
+A camera workshop written by [Dave Jones](https://github.com/waveform80) (author of ```python-picamera```), with some example projects.
+
 ## Workshop
 
 This workshop guides you through setting up the Raspberry Pi camera module, taking pictures and video using the Python ```picamera``` module, and on to connecting a physical button with the GPIO pins and programming it to control the camera.
