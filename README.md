@@ -1,4 +1,4 @@
-# Python picamera Setup
+# Python Picamera Setup
 
 ## Workshop
 
@@ -48,7 +48,7 @@ Normally you would need to do ```sudo apt-get install python-picamera python-rpi
         camera.stop_preview()
     ```
 
-5. Select File/Save from the menu and give your script a name, e.g. "workshop.py"
+5. Select File/Save from the menu and give your script a name, e.g. ```workshop.py```
 6. Select Run/Run Module from the menu (or just press F5) to run the script
 
 ### Camera programming: capture when activated
