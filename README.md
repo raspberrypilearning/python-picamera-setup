@@ -183,8 +183,8 @@ FRAMES = FRAMES_PER_HOUR * 24 * VIDEO_DAYS
 
 def capture_frame(frame):
     with picamera.PiCamera() as cam:
-time.sleep(2)
-cam.capture('/home/pi/Desktop/frame%03d.jpg' % frame)
+        time.sleep(2)
+        cam.capture('/home/pi/Desktop/frame%03d.jpg' % frame)
 
 # Capture the images
 for frame in range(FRAMES):
@@ -199,9 +199,11 @@ for frame in range(FRAMES):
     )
 ```
 
-Once the images have been captured, you can use the following FFMPEG command line to construct a video from the images (after installing ```ffmpeg``` with ```sudo apt-get install ffmpeg```):
+Once the images have been captured, you can use the following FFMPEG command line to construct a video from the images (after installing `ffmpeg` with `sudo apt-get install ffmpeg`):
 
-```ffmpeg -y -f image2 -i /home/pi/Desktop/frame%03d.jpg -r 24 -vcodec libx264 -profile high -preset slow /home/pi/Desktop/timelapse.mp4```
+```
+ffmpeg -y -f image2 -i /home/pi/Desktop/frame%03d.jpg -r 24 -vcodec libx264 -profile high -preset slow /home/pi/Desktop/timelapse.mp4
+```
 
 Be aware that encoding will take a good half an hour of computation on the Pi to produce the video! You may wish to perform this step on a faster machine.
 
@@ -219,16 +221,18 @@ GPIO.setup(17, GPIO.IN, GPIO.PUD_UP)
 with picamera.PiCamera() as camera:
     camera.start_preview()
     frame = 1
-while True:
-    GPIO.wait_for_edge(17, GPIO.FALLING)
-camera.capture('/home/pi/Desktop/frame%03d.jpg' % frame)
-frame += 1
-camera.stop_preview()
+    while True:
+        GPIO.wait_for_edge(17, GPIO.FALLING)
+        camera.capture('/home/pi/Desktop/frame%03d.jpg' % frame)
+        frame += 1
+    camera.stop_preview()
 ```
 
 Once the frames have all been captured a similar FFMPEG command line to the one presented above can be used to convert the frames into a video:
 
-```ffmpeg -y -f image2 -i /home/pi/Desktop/frame%03d.jpg -r 24 -vcodec libx264 -profile high -preset slow /home/pi/Desktop/stop_motion.mp4```
+```
+ffmpeg -y -f image2 -i /home/pi/Desktop/frame%03d.jpg -r 24 -vcodec libx264 -profile high -preset slow /home/pi/Desktop/stop_motion.mp4
+```
 
 ### Security cameras
 
