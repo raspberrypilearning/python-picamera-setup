@@ -32,7 +32,11 @@ This workshop guides you through setting up the Raspberry Pi camera module, taki
 
 ### Camera programming: capture an image
 
-Normally you would need to do `sudo apt-get install python-picamera python-rpi.gpio` to install the Python camera and GPIO libraries, but this has already been done for you as we have no network access in the workshop!
+Start by installing the Python `picamera` and GPIO library packages:
+
+```
+sudo apt-get install python-picamera python3-picamera python-rpi.gpio
+```
 
 1. At the command prompt enter `startx` to start the graphical environment
 2. Double click on `LXTerminal` to start a command line, and enter `sudo idle` to start the Python environment
