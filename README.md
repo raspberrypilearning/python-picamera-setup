@@ -1,10 +1,10 @@
 # Python Picamera Setup
 
-A camera workshop written by [Dave Jones](https://github.com/waveform80) (author of ```python-picamera```), with some example projects.
+A camera workshop written by [Dave Jones](https://github.com/waveform80) (author of `python-picamera`), with some example projects.
 
 ## Workshop
 
-This workshop guides you through setting up the Raspberry Pi camera module, taking pictures and video using the Python ```picamera``` module, and on to connecting a physical button with the GPIO pins and programming it to control the camera.
+This workshop guides you through setting up the Raspberry Pi camera module, taking pictures and video using the Python `picamera` module, and on to connecting a physical button with the GPIO pins and programming it to control the camera.
 
 ### Connecting the camera
 
@@ -16,26 +16,26 @@ This workshop guides you through setting up the Raspberry Pi camera module, taki
 ### Activate the camera
 
 1. Connect USB cable to the power
-2. Login with username ```pi``` and password ```raspberry```
-3. At the command prompt enter ```sudo raspi-config```
-4. At the menu, navigate to ```Enable Camera```
-5. Select ```Enable```
-6. Select ```Finish```
-7. Select ```Yes``` to reboot
+2. Login with username `pi` and password `raspberry`
+3. At the command prompt enter `sudo raspi-config`
+4. At the menu, navigate to `Enable Camera`
+5. Select `Enable`
+6. Select `Finish`
+7. Select `Yes` to reboot
 
 
 ### Test the camera
 
-1. Login again with username ```pi``` and password ```raspberry```
-2. At the command prompt enter ```raspistill -o image.jpg```
+1. Login again with username `pi` and password `raspberry`
+2. At the command prompt enter `raspistill -o image.jpg`
 3. On the screen you should see a preview appear for a few seconds and then change briefly while the image is captured
 
 ### Camera programming: capture an image
 
-Normally you would need to do ```sudo apt-get install python-picamera python-rpi.gpio``` to install the Python camera and GPIO libraries, but this has already been done for you as we have no network access in the workshop!
+Normally you would need to do `sudo apt-get install python-picamera python-rpi.gpio` to install the Python camera and GPIO libraries, but this has already been done for you as we have no network access in the workshop!
 
-1. At the command prompt enter ```startx``` to start the graphical environment
-2. Double click on ```LXTerminal``` to start a command line, and enter ```sudo idle``` to start the Python environment
+1. At the command prompt enter `startx` to start the graphical environment
+2. Double click on `LXTerminal` to start a command line, and enter `sudo idle` to start the Python environment
 3. Select File/New Window from the menu to start a text editor
 4. Enter the following code (CasE is ImPortant!):
 
