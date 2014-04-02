@@ -23,7 +23,6 @@ This workshop guides you through setting up the Raspberry Pi camera module, taki
 6. Select `Finish`
 7. Select `Yes` to reboot
 
-
 ### Test the camera
 
 1. Login again with username `pi` and password `raspberry`
@@ -46,7 +45,7 @@ sudo apt-get install python-picamera python3-picamera python-rpi.gpio
     ```python
     import time
     import picamera
-    
+
     with picamera.PiCamera() as camera:
         camera.start_preview()
         time.sleep(5)
@@ -72,7 +71,7 @@ sudo apt-get install python-picamera python3-picamera python-rpi.gpio
 
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(17, GPIO.IN, GPIO.PUD_UP)
-    
+
     with picamera.PiCamera() as camera:
         camera.start_preview()
         GPIO.wait_for_edge(17, GPIO.FALLING)
@@ -92,10 +91,10 @@ sudo apt-get install python-picamera python3-picamera python-rpi.gpio
     import time
     import picamera
     import RPi.GPIO as GPIO
-    
+
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(17, GPIO.IN, GPIO.PUD_UP)
-    
+
     with picamera.PiCamera() as camera:
         camera.start_preview()
         GPIO.wait_for_edge(17, GPIO.FALLING, GPIO.PUD_UP)
@@ -116,10 +115,10 @@ sudo apt-get install python-picamera python3-picamera python-rpi.gpio
     import time
     import picamera
     import RPi.GPIO as GPIO
-    
+
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(17, GPIO.IN, GPIO.PUD_UP)
-    
+
     with picamera.PiCamera() as camera:
         camera.start_preview()
         GPIO.wait_for_edge(17, GPIO.FALLING)
@@ -142,10 +141,10 @@ sudo apt-get install python-picamera python3-picamera python-rpi.gpio
     import time
     import picamera
     import RPi.GPIO as GPIO
-    
+
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(17, GPIO.IN, GPIO.PUD_UP)
-    
+
     with picamera.PiCamera() as camera:
         stream = picamera.PiCameraCircularIO(camera, seconds=20)
         camera.start_preview()
@@ -242,7 +241,6 @@ ffmpeg -y -f image2 -i /home/pi/Desktop/frame%03d.jpg -r 24 -vcodec libx264 -pro
 
 A variety of security cameras can be built using the techniques in the workshop. By replacing the button with a pressure mat or an infrared motion sensor, you can convert either the "capture when activated" or "circular buffers" programs into security cameras. The first will capture an image when activated, the second will capture the 20 seconds of activity leading up to the sensor being activated.
 
-
 ### Build your own camera/camcorder
 
 By attaching a battery to the Pi, you can construct a hand-held point-and-shoot camera quite easily using the "capture when activated" program above. For basic projects, use a physical view-finder. However, advanced students may want to try their hand at constructing a full-blown digital camera. The Adafruit site has an excellent guide here:
@@ -260,3 +258,13 @@ Shape detection is harder, but certain libraries (OpenCV in particular) have bui
 ### Motion detection
 
 An idea for more talented pupils is to see if they can detect motion simply using the camera itself; in other words, without resorting to an external sensor. Several examples can be found online without too much difficulty, but the code is definitely not aimed at beginners. Once implemented, this project can be extended into a security camera with no external components other than the camera module itself.
+
+## Licence
+
+Unless otherwise specified, everything in this repository is covered by the following licence:
+
+![Creative Commons License](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)
+
+***Python Picamera Setup*** by [Dave Jones](https://github.com/waveform80) and the [Raspberry Pi Foundation](http://raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+
+Based on a work at https://github.com/raspberrypilearning/python-picamera-setup
