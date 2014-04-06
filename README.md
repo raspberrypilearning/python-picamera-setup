@@ -97,7 +97,7 @@ sudo apt-get install python-picamera python3-picamera python-rpi.gpio
 
     with picamera.PiCamera() as camera:
         camera.start_preview()
-        GPIO.wait_for_edge(17, GPIO.FALLING, GPIO.PUD_UP)
+        GPIO.wait_for_edge(17, GPIO.FALLING)
         time.sleep(5)
         camera.capture('/home/pi/Desktop/image.jpg')
         camera.stop_preview()
