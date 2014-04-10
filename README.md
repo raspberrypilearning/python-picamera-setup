@@ -38,7 +38,7 @@ sudo apt-get install python-picamera python3-picamera python-rpi.gpio
 ```
 
 1. At the command prompt enter `startx` to start the graphical desktop environment
-2. Double click on `LXTerminal` to start a command line, and enter `sudo idle` to start the Python environment
+2. Double click on `LXTerminal` to start a command line, and enter `sudo idle &` to start the Python environment
 3. Select File > New Window from the menu to start a text editor
 4. Enter the following code (case is important!):
 
