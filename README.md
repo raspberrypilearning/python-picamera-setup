@@ -131,6 +131,7 @@ sudo apt-get install python-picamera python3-picamera python-rpi.gpio
 
 2. Save and run your script
 3. Press the button to start recording video; press it again to stop and exit the program
+4. To play the video back, open an lxterminal and type ```omxplayer Desktop/video.h264```
 
 ### Camera programming: circular buffers
 
@@ -167,6 +168,7 @@ sudo apt-get install python-picamera python3-picamera python-rpi.gpio
 2. Delete `video.h264` from the desktop
 3. Save and run your script
 4. Press the button to save the last 20+ seconds of video to the drive
+5. To play the video back, open an lxterminal and type ```omxplayer Desktop/video.h264```
 
 ## Camera Project Ideas
 
