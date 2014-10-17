@@ -7,3 +7,5 @@ Unless otherwise specified, everything in this repository is covered by the foll
 ***Python Picamera Setup*** by [Dave Jones](https://github.com/waveform80) and the [Raspberry Pi Foundation](http://raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 Based on a work at https://github.com/raspberrypilearning/python-picamera-setup
+
+GPIO diagrams provided under CC BY SA from [Fritzing](http://fritzing.org/home/).
